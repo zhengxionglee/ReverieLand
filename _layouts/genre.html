@@ -9,7 +9,20 @@ layout: default
   </header>
 
   <ul class="work-list">
-    {% assign works = site.[page.collection] | sort: 'date' | reverse %}
+    {% if page.collection == 'novel' %}
+      {% assign works = site.novel | sort: 'date' | reverse %}
+    {% elsif page.collection == 'gushi' %}
+      {% assign works = site.gushi | sort: 'date' | reverse %}
+    {% elsif page.collection == 'guci' %}
+      {% assign works = site.guci | sort: 'date' | reverse %}
+    {% elsif page.collection == 'xiandaishi' %}
+      {% assign works = site.xiandaishi | sort: 'date' | reverse %}
+    {% elsif page.collection == 'duilian' %}
+      {% assign works = site.duilian | sort: 'date' | reverse %}
+    {% elsif page.collection == 'sanwen' %}
+      {% assign works = site.sanwen | sort: 'date' | reverse %}
+    {% endif %}
+
     {% for work in works %}
       <li class="work-list-item">
         <a href="{{ work.url | relative_url }}">
