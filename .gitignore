@@ -19,3 +19,6 @@ vendor/
 
 # 不要把示例作品 commit 上去（首次部署时手动删掉 works/ 里的内容即可）
 # works/
+token.txt
+*.token
+

@@ -44,6 +44,15 @@ collections:
     output: true
     permalink: /sanwen/:path/
 
+# 静态文件输出目录（让 Jekyll 识别 works/novel/files/ 下的 PDF/HTML）
+defaults:
+  - scope:
+      path: ""
+      type: novel
+    values:
+      layout: work
+      genre: 小说
+
 # 默认 front matter
 defaults:
   - scope:

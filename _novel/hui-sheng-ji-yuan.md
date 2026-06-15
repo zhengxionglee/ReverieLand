@@ -5,7 +5,6 @@ date: 2026-06-10 20:00:00 +0800
 author: 你的名字
 status: 进行中
 genre: 小说
-permalink: /novel/hui-sheng-ji-yuan/
 ---
 
 ## 故事简介
@@ -23,8 +22,8 @@ permalink: /novel/hui-sheng-ji-yuan/
 ## 下载
 
 <ul class="download-list" markdown="1">
-- 📄 [完整版 PDF（v9 修订稿）]({{ '/novel/hui-sheng-ji-yuan/files/echo/echo_v9.pdf' | relative_url }}) — 适合离线阅读 / 打印
-- 📱 [公众号排版版 HTML]({{ '/novel/hui-sheng-ji-yuan/files/echo/wechat.html' | relative_url }}) — 移动端友好版本
+- 📄 [完整版 PDF（v9 修订稿）]({{ '/assets/novel/echo/echo_v9.pdf' | relative_url }}) — 适合离线阅读 / 打印
+- 📱 [公众号排版版 HTML]({{ '/assets/novel/echo/wechat.html' | relative_url }}) — 移动端友好版本
 </ul>
 
 ## 状态

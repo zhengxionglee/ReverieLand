@@ -5,7 +5,6 @@ date: 2026-05-28 19:30:00 +0800
 author: 你的名字
 status: 已完结
 genre: 小说
-permalink: /novel/deng-ta-xie-yi/
 ---
 
 ## 故事简介
@@ -23,8 +22,8 @@ permalink: /novel/deng-ta-xie-yi/
 ## 下载
 
 <ul class="download-list" markdown="1">
-- 📄 [完整版 PDF]({{ '/novel/deng-ta-xie-yi/files/lighthouse/LighthouseProtocol.pdf' | relative_url }}) — 适合离线阅读 / 打印
-- 📱 [公众号排版版 HTML]({{ '/novel/deng-ta-xie-yi/files/lighthouse/wechat.html' | relative_url }}) — 移动端友好版本
+- 📄 [完整版 PDF]({{ '/assets/novel/lighthouse/LighthouseProtocol.pdf' | relative_url }}) — 适合离线阅读 / 打印
+- 📱 [公众号排版版 HTML]({{ '/assets/novel/lighthouse/wechat.html' | relative_url }}) — 移动端友好版本
 </ul>
 
 ## 状态
