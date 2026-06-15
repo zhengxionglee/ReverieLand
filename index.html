@@ -1,0 +1,62 @@
+---
+layout: default
+title: 拾墨斋
+---
+
+<section class="hero">
+  <h1 class="hero-title">拾墨斋</h1>
+  <p class="hero-sub">一个人的文学小院</p>
+  <p class="hero-desc">
+    这里收着我写过的一些东西——小说、古诗、古词、现代诗、对联、散文。
+    <br>慢慢写，慢慢读。
+  </p>
+</section>
+
+<section class="genres">
+  <a class="genre-card" href="{{ '/novel/' | relative_url }}">
+    <span class="genre-icon">📖</span>
+    <span class="genre-name">小说</span>
+    <span class="genre-count">{{ site.novel | size }} 篇</span>
+  </a>
+  <a class="genre-card" href="{{ '/gushi/' | relative_url }}">
+    <span class="genre-icon">🏔️</span>
+    <span class="genre-name">古诗</span>
+    <span class="genre-count">{{ site.gushi | size }} 首</span>
+  </a>
+  <a class="genre-card" href="{{ '/guci/' | relative_url }}">
+    <span class="genre-icon">🌙</span>
+    <span class="genre-name">古词</span>
+    <span class="genre-count">{{ site.guci | size }} 阙</span>
+  </a>
+  <a class="genre-card" href="{{ '/xiandaishi/' | relative_url }}">
+    <span class="genre-icon">🌿</span>
+    <span class="genre-name">现代诗</span>
+    <span class="genre-count">{{ site.xiandaishi | size }} 首</span>
+  </a>
+  <a class="genre-card" href="{{ '/duilian/' | relative_url }}">
+    <span class="genre-icon">🪧</span>
+    <span class="genre-name">对联</span>
+    <span class="genre-count">{{ site.duilian | size }} 副</span>
+  </a>
+  <a class="genre-card" href="{{ '/sanwen/' | relative_url }}">
+    <span class="genre-icon">🍃</span>
+    <span class="genre-name">散文</span>
+    <span class="genre-count">{{ site.sanwen | size }} 篇</span>
+  </a>
+</section>
+
+<section class="recent">
+  <h2 class="section-title">最近更新</h2>
+  <ul class="recent-list">
+    {% assign all_works = site.novel | concat: site.gushi | concat: site.guci
+       | concat: site.xiandaishi | concat: site.duilian | concat: site.sanwen %}
+    {% assign sorted = all_works | sort: 'date' | reverse %}
+    {% for work in sorted limit: 8 %}
+      <li class="recent-item">
+        <span class="recent-genre">[{{ work.genre }}]</span>
+        <a class="recent-link" href="{{ work.url | relative_url }}">{{ work.title }}</a>
+        <span class="recent-date">{{ work.date | date: "%Y.%m.%d" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

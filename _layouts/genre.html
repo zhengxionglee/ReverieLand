@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<section class="genre-page">
+  <header class="genre-header">
+    <h1>{{ page.genre_name }}</h1>
+    <p class="genre-desc">{{ page.genre_desc }}</p>
+  </header>
+
+  <ul class="work-list">
+    {% assign works = site.[page.collection] | sort: 'date' | reverse %}
+    {% for work in works %}
+      <li class="work-list-item">
+        <a href="{{ work.url | relative_url }}">
+          <h3 class="work-list-title">{{ work.title }}</h3>
+          {% if work.subtitle %}
+            <p class="work-list-subtitle">{{ work.subtitle }}</p>
+          {% endif %}
+          <p class="work-list-meta">
+            <time>{{ work.date | date: "%Y.%m.%d" }}</time>
+            {% if work.author %} · {{ work.author }}{% endif %}
+          </p>
+          {% if work.excerpt %}
+            <p class="work-list-excerpt">{{ work.excerpt | strip_html | truncate: 80 }}</p>
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if works.size == 0 %}
+    <p class="empty">这里还没有作品，敬请期待。</p>
+  {% endif %}
+</section>

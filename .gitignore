@@ -1,0 +1,21 @@
+# Jekyll 构建产物
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# 本地编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Gem / Node
+Gemfile.lock
+node_modules/
+vendor/
+
+# 不要把示例作品 commit 上去（首次部署时手动删掉 works/ 里的内容即可）
+# works/

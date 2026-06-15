@@ -1,0 +1,100 @@
+title: 拾墨斋
+subtitle: 一个人的文学小院
+description: 收录小说、古诗、古词、现代诗、对联、散文。慢慢写，慢慢读。
+author: 你的名字
+email: your-email@example.com
+
+# GitHub Pages 配置
+# 如果用项目仓库：url 留空，baseurl 填 /仓库名
+# 如果用个人主页：url 填 https://用户名.github.io，baseurl 留空
+url: ""
+baseurl: ""
+
+# 主题（先注释掉，部署时取消注释；或者用 remote_theme）
+# theme: minima
+remote_theme: pages-themes/architect@v0.2.0
+
+# 永久链接格式：/works/gushi/2025-01-15-title.html
+permalink: /:collection/:year-:month-:day-:title/
+
+# Jekyll 配置
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 集合（collections）：按体裁分类
+collections:
+  novel:
+    output: true
+    permalink: /novel/:path/
+  gushi:
+    output: true
+    permalink: /gushi/:path/
+  guci:
+    output: true
+    permalink: /guci/:path/
+  xiandaishi:
+    output: true
+    permalink: /xiandaishi/:path/
+  duilian:
+    output: true
+    permalink: /duilian/:path/
+  sanwen:
+    output: true
+    permalink: /sanwen/:path/
+
+# 默认 front matter
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: novel
+    values:
+      layout: work
+      genre: 小说
+  - scope:
+      path: ""
+      type: gushi
+    values:
+      layout: work
+      genre: 古诗
+  - scope:
+      path: ""
+      type: guci
+    values:
+      layout: work
+      genre: 古词
+  - scope:
+      path: ""
+      type: xiandaishi
+    values:
+      layout: work
+      genre: 现代诗
+  - scope:
+      path: ""
+      type: duilian
+    values:
+      layout: work
+      genre: 对联
+  - scope:
+      path: ""
+      type: sanwen
+    values:
+      layout: work
+      genre: 散文
+
+# 不让 Jekyll 构建这些
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache

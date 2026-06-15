@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.subtitle }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav">
+        <a href="{{ '/novel/' | relative_url }}">小说</a>
+        <a href="{{ '/gushi/' | relative_url }}">古诗</a>
+        <a href="{{ '/guci/' | relative_url }}">古词</a>
+        <a href="{{ '/xiandaishi/' | relative_url }}">现代诗</a>
+        <a href="{{ '/duilian/' | relative_url }}">对联</a>
+        <a href="{{ '/sanwen/' | relative_url }}">散文</a>
+        <a href="{{ '/about/' | relative_url }}">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© {{ site.time | date: '%Y' }} {{ site.title }} · 用 <a href="https://jekyllrb.com">Jekyll</a> 搭建，托管在 GitHub Pages</p>
+      <p class="footer-quote">「文章合为时而著，歌诗合为事而作」</p>
+    </div>
+  </footer>
+</body>
+</html>
