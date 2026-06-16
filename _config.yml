@@ -36,6 +36,10 @@ collections:
   gushi:
     output: true
     permalink: /gushi/:path/
+  # 古诗合集（如《怀思集》《行路集》收录多首古诗）
+  gushi_collections:
+    output: true
+    permalink: /gushi-collections/:path/
   guci:
     output: true
     permalink: /guci/:path/
@@ -79,8 +83,14 @@ defaults:
       path: ""
       type: gushi
     values:
-      layout: work
+      layout: gushi
       genre: 古诗
+  - scope:
+      path: ""
+      type: gushi_collections
+    values:
+      layout: gushi-collection
+      genre: 古诗集
   - scope:
       path: ""
       type: guci

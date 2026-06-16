@@ -1,7 +1,55 @@
 ---
-layout: genre
-collection: gushi
-genre_name: 古诗
-genre_desc: 五言、七言、绝句、律诗，平仄对仗里藏着的旧时光。
+layout: default
+title: 古诗
 permalink: /gushi/
 ---
+
+<section class="genre-page">
+  <header class="genre-header">
+    <h1>古诗</h1>
+    <p class="genre-desc">五言、七言、绝句、律诗，平仄对仗里藏着的旧时光。</p>
+  </header>
+
+  {% if site.gushi_collections and site.gushi_collections.size > 0 %}
+    <section class="gushi-collections">
+      <h2 class="section-title">古诗集</h2>
+      <div class="genre-grid">
+        {% assign collections = site.gushi_collections | sort: 'date' | reverse %}
+        {% for coll in collections %}
+          <a class="genre-card collection-card" href="{{ coll.url | relative_url }}">
+            <span class="genre-icon">📜</span>
+            <span class="genre-name">{{ coll.title }}</span>
+            {% if coll.subtitle %}
+              <span class="genre-name-en">{{ coll.subtitle }}</span>
+            {% endif %}
+            <span class="genre-count">
+              {% assign n = site.gushi | where: "collection_title", coll.title | size %}
+              {{ n }} 首
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="gushi-recent">
+    <h2 class="section-title">所有古诗</h2>
+    <ul class="poem-list-flat">
+      {% assign all_gushi = site.gushi | sort: 'date' | reverse %}
+      {% for d in all_gushi %}
+        <li class="poem-list-flat-item">
+          <span class="recent-genre">{{ d.collection_title | default: '单首' }}</span>
+          <a class="recent-link" href="{{ d.url | relative_url }}">{{ d.title }}</a>
+          <span class="recent-date">{{ d.date | date: "%Y.%m" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    {% if all_gushi.size == 0 %}
+      <p class="empty">这里还没有作品，敬请期待。</p>
+    {% endif %}
+  </section>
+
+  <nav class="work-nav">
+    <a href="{{ '/' | relative_url }}">← 返回首页</a>
+  </nav>
+</section>

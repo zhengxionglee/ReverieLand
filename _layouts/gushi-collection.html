@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<section class="collection-page">
+  <header class="collection-header">
+    <p class="collection-genre">古诗集</p>
+    <h1 class="collection-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="collection-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <p class="collection-meta">
+      <time>{{ page.date | date: "%Y年%m月" }}</time>
+      {% if page.author %} · {{ page.author }}{% endif %}
+      {% if page.poem_count %} · {{ page.poem_count }} 首{% endif %}
+    </p>
+  </header>
+
+  {% if page.intro %}
+    <section class="collection-intro">
+      {{ page.intro | markdownify }}
+    </section>
+  {% endif %}
+
+  <section class="poems-list">
+    <h2 class="section-title">篇目</h2>
+    <ol class="poems-ol">
+      {% assign poems_in_collection = site.gushi | where: "collection_title", page.title | sort: "date" %}
+      {% for poem in poems_in_collection %}
+        <li class="poem-item">
+          <a href="{{ poem.url | relative_url }}">
+            <span class="poem-title">{{ poem.title }}</span>
+            <span class="poem-date">{{ poem.date | date: "%Y.%m" }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+    {% if poems_in_collection.size == 0 %}
+      <p class="empty">这本诗集暂时还没有篇目。</p>
+    {% endif %}
+  </section>
+
+  {% if page.notes %}
+    <aside class="collection-notes">
+      <h3>创作手记</h3>
+      <p>{{ page.notes }}</p>
+    </aside>
+  {% endif %}
+
+  <nav class="work-nav">
+    <a href="{{ '/gushi/' | relative_url }}">← 返回古诗</a>
+  </nav>
+</section>
