@@ -652,22 +652,10 @@ a:hover { color: var(--accent-soft); }
   color: var(--ink);
 }
 
-.work-body .duilian-shanglian::after {
-  content: '（上联）';
-  font-size: 0.7rem;
-  color: var(--ink-faint);
-  margin-left: 0.8rem;
-  font-weight: normal;
-  letter-spacing: 0.1em;
-}
-
+/* 隐藏"上联/下联"小标签（按用户要求） */
+.work-body .duilian-shanglian::after,
 .work-body .duilian-xialian::after {
-  content: '（下联）';
-  font-size: 0.7rem;
-  color: var(--ink-faint);
-  margin-left: 0.8rem;
-  font-weight: normal;
-  letter-spacing: 0.1em;
+  content: none;
 }
 
 .work-body .duilian-horizontal {
