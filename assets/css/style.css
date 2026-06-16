@@ -608,6 +608,22 @@ a:hover { color: var(--accent-soft); }
   margin-bottom: 0.3rem;
 }
 
+/* 诗页里的 --- 水平分隔线（替代双空行）：淡雅、30% 宽、居中 */
+.poem-work .work-body hr {
+  border: none;
+  width: 25%;
+  margin: 1.8rem auto;
+  height: 1px;
+  background: var(--accent-soft);
+  opacity: 0.45;
+  position: static;
+  color: transparent;
+}
+
+.poem-work .work-body hr::after {
+  content: none;
+}
+
 .work-body .ci-title {
   text-align: center;
   font-size: 1rem;
