@@ -85,7 +85,7 @@ defaults:
       path: ""
       type: guci
     values:
-      layout: work
+      layout: ci
       genre: 古词
   - scope:
       path: ""
