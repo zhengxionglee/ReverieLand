@@ -1,8 +1,12 @@
-title: 拾墨斋
-subtitle: 一个人的文学小院
-description: 收录小说、古诗、古词、现代诗、对联、散文、技术遐想、弦外之音。慢慢写，慢慢读。
+title: 遐想之地
+subtitle: ReverieLand
+description: 不为无益之事，何以遣有涯之生。收录小说、古诗、古词、现代诗、对联、散文、技术遐想、弦外之音。
 author: 你的名字
 email: 1927743354@qq.com
+
+# 站名 slogan（显示在主页 hero 区）
+slogan: 不为无益之事，何以遣有涯之生
+slogan_en: Do useless things. Dream out loud. Pass the time.
 
 # GitHub Pages 配置
 # 项目仓库：url 留空，baseurl 填 /仓库名

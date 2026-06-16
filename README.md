@@ -1,6 +1,8 @@
-# 拾墨斋 · 你的文学作品网站
+# 遐想之地 · ReverieLand
 
-一个用 Jekyll + GitHub Pages 搭建的免费个人文学站。收录小说、古诗、古词、现代诗、对联、散文。
+一个用 Jekyll + GitHub Pages 搭建的免费个人网站。收录小说、古诗、古词、现代诗、对联、散文、技术遐想、弦外之音。
+
+> 不为无益之事，何以遣有涯之生。
 
 ## 特点
 
@@ -72,7 +74,7 @@ bundle exec jekyll serve
 cd D:\AI_Project\Novel_website
 git init
 git add .
-git commit -m "init: 拾墨斋开张"
+git commit -m "init: 遐想之地开张"
 git branch -M main
 git remote add origin https://github.com/你的用户名/仓库名.git
 git push -u origin main
@@ -102,7 +104,7 @@ works/duilian/2026-01-15-shu-fang-lian.md
 works/sanwen/2026-03-22-lao-jie-de-xia-wu.md
 ```
 
-散文 `works/sanwen/2026-06-15-shi-mo-zhai-ji.md`（拾墨斋记）可以保留，作为「开篇散文」也行，删不删随你。
+散文「开篇散文」传统：如果想留一篇站名记之类的散文，可以新建 `_sanwen/<日期>-<标题>.md` 写一下。
 
 **小说保留**——`works/novel/hui-sheng-ji-yuan.md` 和 `works/novel/deng-ta-xie-yi.md` 是你的真实作品，连同 `works/novel/files/` 下的原文 PDF/HTML 一起保留。这些文件会被 Jekyll 自动复制到网站上，访客可以从介绍页下载。
 

@@ -4,11 +4,14 @@ title: 关于
 ---
 
 <section class="about">
-  <h1>关于这个小院</h1>
+  <h1>关于这个地方</h1>
 
   <p>
-    这里叫 <strong>拾墨斋 · ReverieLand</strong>，是我放自己东西的地方。
-    名字取自「拾人牙慧不如自拾笔墨」的意思——虽然口气大了点，但谁心里没点小执念呢。
+    这里叫 <strong>遐想之地 · ReverieLand</strong>。
+  </p>
+
+  <p style="text-align:center; color: var(--accent); font-style: italic; letter-spacing: 0.15em; font-size: 1.15rem;">
+    「不为无益之事，何以遣有涯之生。」
   </p>
 
   <h2>三个角落</h2>
@@ -33,11 +36,6 @@ title: 关于
     这个网站用 <a href="https://jekyllrb.com">Jekyll</a> 静态生成，
     托管在 GitHub Pages，完全免费。
     内容用 Markdown 写，每次写完 push 一下就自动更新。
-  </p>
-
-  <h2>引用的话</h2>
-  <p style="text-align:center; color: var(--accent); font-style: italic; letter-spacing: 0.1em;">
-    「不为无益之事，何以遣有涯之生。」
   </p>
 
   <h2>联系我</h2>

@@ -127,6 +127,24 @@ a:hover { color: var(--accent-soft); }
   line-height: 2;
 }
 
+.hero-slogan {
+  font-size: 1.15rem;
+  color: var(--accent);
+  font-style: italic;
+  letter-spacing: 0.15em;
+  margin: 1rem 0 0.3rem;
+  font-weight: 500;
+}
+
+.hero-slogan-en {
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.15em;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
 /* ===== 体裁卡片 ===== */
 .genres {
   display: grid;
