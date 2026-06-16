@@ -2,7 +2,7 @@
 title: 灯塔协议
 subtitle: 短篇科幻 · 已完结
 date: 2026-05-28 19:30:00 +0800
-author: 你的名字
+author: 林岬
 status: 已完结
 genre: 小说
 ---
