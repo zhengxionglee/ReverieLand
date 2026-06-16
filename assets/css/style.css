@@ -147,10 +147,13 @@ a:hover { color: var(--accent-soft); }
 
 /* ===== 体裁卡片 ===== */
 .genres {
+  margin-bottom: 3rem;
+}
+
+.genre-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  margin-bottom: 4rem;
 }
 
 .genre-card {
@@ -228,10 +231,6 @@ a:hover { color: var(--accent-soft); }
   color: var(--accent-soft);
   margin: 0 0.8rem;
   letter-spacing: 0.3em;
-}
-
-.genres {
-  margin-bottom: 3rem;
 }
 
 .nav-divider {
