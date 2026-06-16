@@ -5,7 +5,13 @@ layout: default
 <section class="genre-page">
   <header class="genre-header">
     <h1>{{ page.genre_name }}</h1>
+    {% if page.genre_name_en %}
+      <p class="genre-name-en">{{ page.genre_name_en }}</p>
+    {% endif %}
     <p class="genre-desc">{{ page.genre_desc }}</p>
+    {% if page.genre_slogan_en %}
+      <p class="genre-slogan-en">{{ page.genre_slogan_en }}</p>
+    {% endif %}
   </header>
 
   <ul class="work-list">
@@ -21,6 +27,10 @@ layout: default
       {% assign works = site.duilian | sort: 'date' | reverse %}
     {% elsif page.collection == 'sanwen' %}
       {% assign works = site.sanwen | sort: 'date' | reverse %}
+    {% elsif page.collection == 'tech' %}
+      {% assign works = site.tech | sort: 'date' | reverse %}
+    {% elsif page.collection == 'overtones' %}
+      {% assign works = site.overtones | sort: 'date' | reverse %}
     {% endif %}
 
     {% for work in works %}

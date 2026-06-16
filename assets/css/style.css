@@ -170,14 +170,37 @@ a:hover { color: var(--accent-soft); }
   color: var(--ink-faint);
 }
 
-/* ===== 区块标题 ===== */
+.genre-card.special {
+  border-color: var(--accent-soft);
+  background: linear-gradient(135deg, var(--bg-card) 0%, #fdf3eb 100%);
+}
+
+.genre-card.special .genre-icon {
+  filter: hue-rotate(-10deg);
+}
+
+.genre-name-en {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-style: italic;
+  letter-spacing: 0.15em;
+  margin-top: 0.2rem;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.3em;
+  margin-bottom: 1.5rem;
   text-align: center;
-  margin-bottom: 2rem;
-  letter-spacing: 0.2em;
-  color: var(--ink);
   position: relative;
 }
 
@@ -185,7 +208,36 @@ a:hover { color: var(--accent-soft); }
 .section-title::after {
   content: '· · ·';
   color: var(--accent-soft);
-  margin: 0 1rem;
+  margin: 0 0.8rem;
+  letter-spacing: 0.3em;
+}
+
+.genres {
+  margin-bottom: 3rem;
+}
+
+.nav-divider {
+  color: var(--ink-faint);
+  margin: 0 0.3rem;
+  user-select: none;
+}
+
+/* ===== 区块标题 ===== */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.3em;
+  color: var(--ink-faint);
+  position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '· · ·';
+  color: var(--accent-soft);
+  margin: 0 0.8rem;
   letter-spacing: 0.3em;
 }
 
@@ -248,10 +300,28 @@ a:hover { color: var(--accent-soft); }
   margin-bottom: 0.5rem;
 }
 
+.genre-name-en {
+  color: var(--ink-faint);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
 .genre-desc {
   color: var(--ink-faint);
   font-size: 0.95rem;
   letter-spacing: 0.1em;
+}
+
+.genre-slogan-en {
+  color: var(--accent-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 .work-list {

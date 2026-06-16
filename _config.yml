@@ -1,8 +1,8 @@
 title: 拾墨斋
 subtitle: 一个人的文学小院
-description: 收录小说、古诗、古词、现代诗、对联、散文。慢慢写，慢慢读。
+description: 收录小说、古诗、古词、现代诗、对联、散文、技术遐想、弦外之音。慢慢写，慢慢读。
 author: 你的名字
-email: your-email@example.com
+email: 1927743354@qq.com
 
 # GitHub Pages 配置
 # 项目仓库：url 留空，baseurl 填 /仓库名
@@ -13,7 +13,7 @@ baseurl: "/ReverieLand"
 # theme: minima
 # remote_theme: pages-themes/architect@v0.2.0
 
-# 永久链接格式：/works/gushi/2025-01-15-title.html
+# 永久链接格式：/:collection/:year-:month-:day-:title/
 permalink: /:collection/:year-:month-:day-:title/
 
 # Jekyll 配置
@@ -23,8 +23,9 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# 集合（collections）：按体裁分类
+# 集合（collections）：按栏目分类
 collections:
+  # 文学
   novel:
     output: true
     permalink: /novel/:path/
@@ -43,15 +44,14 @@ collections:
   sanwen:
     output: true
     permalink: /sanwen/:path/
-
-# 静态文件输出目录（让 Jekyll 识别 works/novel/files/ 下的 PDF/HTML）
-defaults:
-  - scope:
-      path: ""
-      type: novel
-    values:
-      layout: work
-      genre: 小说
+  # 工程技术（Tech Reveries · 技术遐想）
+  tech:
+    output: true
+    permalink: /tech/:path/
+  # 音乐（Overtones · 弦外之音）
+  overtones:
+    output: true
+    permalink: /overtones/:path/
 
 # 默认 front matter
 defaults:
@@ -60,6 +60,7 @@ defaults:
       type: posts
     values:
       layout: post
+  # 文学体裁
   - scope:
       path: ""
       type: novel
@@ -96,6 +97,19 @@ defaults:
     values:
       layout: work
       genre: 散文
+  # 新栏目
+  - scope:
+      path: ""
+      type: tech
+    values:
+      layout: work
+      genre: 技术遐想
+  - scope:
+      path: ""
+      type: overtones
+    values:
+      layout: work
+      genre: 弦外之音
 
 # 不让 Jekyll 构建这些
 exclude:
