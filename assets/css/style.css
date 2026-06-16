@@ -447,6 +447,50 @@ a:hover { color: var(--accent-soft); }
   color: var(--ink);
 }
 
+/* 小说正文：更长行距、章节标题更突出、首行缩进可保留 */
+.work-body h2 {
+  font-size: 1.6rem;
+  margin: 3rem auto 1.5rem;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  padding: 1rem 0;
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+  position: relative;
+}
+
+.work-body h2::before {
+  content: '·';
+  color: var(--accent-soft);
+  margin-right: 0.5em;
+}
+
+.work-body h2::after {
+  content: '·';
+  color: var(--accent-soft);
+  margin-left: 0.5em;
+}
+
+.work-body hr {
+  border: none;
+  text-align: center;
+  margin: 2.5rem 0;
+  color: var(--ink-faint);
+}
+
+.work-body hr::after {
+  content: '✦ ✦ ✦';
+  letter-spacing: 1em;
+  font-size: 0.9rem;
+}
+
+/* 章节之间用空行分隔 */
+.work-body p {
+  margin-bottom: 1.3rem;
+  text-indent: 2em;
+}
+
 .work-body p {
   margin-bottom: 1.5rem;
   text-indent: 2em;

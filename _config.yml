@@ -1,6 +1,6 @@
 title: 遐想之地
 subtitle: ReverieLand
-description: 不为无益之事，何以遣有涯之生。收录小说、古诗、古词、现代诗、对联、散文、技术遐想、弦外之音。
+description: 不为无益之事，何以遣有涯之生。收录小说、古诗、古词、现代诗、对联、散文、弦外。
 author: 你的名字
 email: 1927743354@qq.com
 
@@ -48,11 +48,7 @@ collections:
   sanwen:
     output: true
     permalink: /sanwen/:path/
-  # 工程技术（Tech Reveries · 技术遐想）
-  tech:
-    output: true
-    permalink: /tech/:path/
-  # 音乐（Overtones · 弦外之音）
+  # 弦外（Overtones · 歌词赏析）
   overtones:
     output: true
     permalink: /overtones/:path/
@@ -101,19 +97,13 @@ defaults:
     values:
       layout: work
       genre: 散文
-  # 新栏目
-  - scope:
-      path: ""
-      type: tech
-    values:
-      layout: work
-      genre: 技术遐想
+  # 弦外
   - scope:
       path: ""
       type: overtones
     values:
       layout: work
-      genre: 弦外之音
+      genre: 弦外
 
 # 不让 Jekyll 构建这些
 exclude:

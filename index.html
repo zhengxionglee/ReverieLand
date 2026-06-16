@@ -15,7 +15,7 @@ title: 遐想之地
 </section>
 
 <section class="genres">
-  <h2 class="section-title">文学</h2>
+  <h2 class="section-title">栏目</h2>
   <div class="genre-grid">
     <a class="genre-card" href="{{ '/novel/' | relative_url }}">
       <span class="genre-icon">📖</span>
@@ -47,21 +47,9 @@ title: 遐想之地
       <span class="genre-name">散文</span>
       <span class="genre-count">{{ site.sanwen | size }} 篇</span>
     </a>
-  </div>
-</section>
-
-<section class="genres">
-  <h2 class="section-title">手艺</h2>
-  <div class="genre-grid">
-    <a class="genre-card special" href="{{ '/tech/' | relative_url }}">
-      <span class="genre-icon">⚙️</span>
-      <span class="genre-name">技术遐想</span>
-      <span class="genre-name-en">Tech Reveries</span>
-      <span class="genre-count">{{ site.tech | size }} 篇</span>
-    </a>
-    <a class="genre-card special" href="{{ '/overtones/' | relative_url }}">
+    <a class="genre-card" href="{{ '/overtones/' | relative_url }}">
       <span class="genre-icon">🎵</span>
-      <span class="genre-name">弦外之音</span>
+      <span class="genre-name">弦外</span>
       <span class="genre-name-en">Overtones</span>
       <span class="genre-count">{{ site.overtones | size }} 篇</span>
     </a>
@@ -73,7 +61,7 @@ title: 遐想之地
   <ul class="recent-list">
     {% assign all_works = site.novel | concat: site.gushi | concat: site.guci
        | concat: site.xiandaishi | concat: site.duilian | concat: site.sanwen
-       | concat: site.tech | concat: site.overtones %}
+       | concat: site.overtones %}
     {% assign sorted = all_works | sort: 'date' | reverse %}
     {% for work in sorted limit: 10 %}
       <li class="recent-item">

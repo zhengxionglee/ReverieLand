@@ -14,20 +14,12 @@ title: 关于
     「不为无益之事，何以遣有涯之生。」
   </p>
 
-  <h2>三个角落</h2>
+  <h2>栏目</h2>
+
+  <p><strong>小说 / 古诗 / 古词 / 现代诗 / 对联 / 散文</strong> —— 写得有好有坏，但都是认真写的。</p>
 
   <p>
-    <strong>文学</strong>——小说、古诗、古词、现代诗、对联、散文。
-    写得有好有坏，但都是认真写的。
-  </p>
-
-  <p>
-    <strong>技术遐想 · Tech Reveries</strong> ——编写白日梦，建造无用物，丰盈灵魂。<br>
-    <em>Code your daydreams. Build the useless. Enrich the soul.</em>
-  </p>
-
-  <p>
-    <strong>弦外之音 · Overtones</strong> ——曲有尽，意无穷。不做乐评，不推新歌，只打捞藏在旋律里的秘密。<br>
+    <strong>弦外 · Overtones</strong> ——曲有尽，意无穷。不做乐评，不推新歌，只打捞藏在旋律里的秘密。<br>
     <em>Music fades. Overtones remain.</em>
   </p>
 
