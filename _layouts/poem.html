@@ -27,6 +27,15 @@ layout: default
   {% endif %}
 
   <nav class="work-nav">
-    <a href="{{ '/xiandaishi-collections/xing-lu-nan/' | relative_url }}">← 返回诗集《行路难》</a>
+    {% if page.collection_title %}
+      {% assign coll = site.xiandaishi_collections | where: "title", page.collection_title | first %}
+      {% if coll %}
+        <a href="{{ coll.url | relative_url }}">← 返回诗集《{{ page.collection_title }}》</a>
+      {% else %}
+        <a href="{{ '/xiandaishi/' | relative_url }}">← 返回现代诗</a>
+      {% endif %}
+    {% else %}
+      <a href="{{ '/xiandaishi/' | relative_url }}">← 返回现代诗</a>
+    {% endif %}
   </nav>
 </article>
