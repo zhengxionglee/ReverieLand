@@ -18,7 +18,8 @@ html { font-size: 16px; scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: "Noto Serif SC", "Songti SC", "STSong", "Source Han Serif",
+  font-family: "LXGW WenKai Screen", "LXGW WenKai", "霞鹜文楷",
+               "Noto Serif SC", "Songti SC", "STSong", "Source Han Serif",
                "FangSong", "STFangsong", "PingFang SC", serif;
   font-size: 1.05rem;
   line-height: 1.85;
@@ -441,9 +442,11 @@ a:hover { color: var(--accent-soft); }
 }
 
 .work-body {
-  font-size: 1.1rem;
-  line-height: 2.2;
+  font-size: 1.15rem;
+  line-height: 2.3;
   color: var(--ink);
+  font-family: "LXGW WenKai Screen", "LXGW WenKai", "霞鹜文楷",
+               "Noto Serif SC", "Songti SC", "STSong", serif;
 }
 
 /* 小说正文：更长行距、章节标题更突出、首行缩进可保留 */
