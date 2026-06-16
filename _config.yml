@@ -87,7 +87,7 @@ defaults:
       path: ""
       type: xiandaishi
     values:
-      layout: work
+      layout: poem
       genre: 现代诗
   - scope:
       path: ""

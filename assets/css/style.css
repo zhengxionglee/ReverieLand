@@ -451,7 +451,8 @@ a:hover { color: var(--accent-soft); }
 
 /* 诗：居中 + 大字号 + 无首行缩进 */
 .work-body .poem,
-.work-body div.poem {
+.work-body div.poem,
+.poem-work .poem-body {
   text-align: center;
   text-indent: 0;
   margin: 1.5rem 0;
@@ -462,9 +463,20 @@ a:hover { color: var(--accent-soft); }
   color: var(--ink);
 }
 
-.work-body .poem p {
+.work-body .poem p,
+.poem-work .poem-body p {
   text-indent: 0;
   margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.poem-work .poem-body {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 2rem 1rem;
+  background: var(--bg-card);
+  border-left: 2px solid var(--accent-soft);
+  border-right: 2px solid var(--accent-soft);
 }
 
 /* 小说正文：更长行距、章节标题更突出、首行缩进可保留 */
