@@ -657,6 +657,176 @@ a:hover { color: var(--accent-soft); }
 
 .work-nav a:hover { color: var(--accent); }
 
+/* ===== 诗集（xiandaishi collections） ===== */
+.collection-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.collection-header {
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.collection-genre {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.3em;
+  padding: 0.2rem 1rem;
+  border: 1px solid var(--accent-soft);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.collection-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+
+.collection-subtitle {
+  color: var(--ink-faint);
+  font-style: italic;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.collection-meta {
+  color: var(--ink-faint);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.collection-intro {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--ink-soft);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.collection-intro p {
+  margin-bottom: 1rem;
+  text-indent: 2em;
+}
+
+.collection-card {
+  background: linear-gradient(135deg, var(--bg-card) 0%, #faf3e6 100%);
+  border-color: var(--accent-soft);
+}
+
+.collection-card:hover {
+  background: linear-gradient(135deg, #fffaf0 0%, #f9ead8 100%);
+}
+
+.poems-list {
+  margin: 3rem 0;
+}
+
+.poems-list .section-title {
+  margin-bottom: 2rem;
+}
+
+.poems-ol {
+  list-style: none;
+  counter-reset: poem-counter;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+}
+
+.poem-item {
+  counter-increment: poem-counter;
+  padding: 0.9rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.poem-item:last-child {
+  border-bottom: none;
+}
+
+.poem-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--ink);
+  gap: 1rem;
+}
+
+.poem-item a:hover {
+  color: var(--accent);
+}
+
+.poem-item a::before {
+  content: counter(poem-counter, chinese-lower-numeric) "·";
+  color: var(--accent);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.poem-title {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.poem-date {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  flex-shrink: 0;
+}
+
+.collection-notes {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--highlight);
+  border-left: 3px solid var(--accent);
+  border-radius: 2px;
+}
+
+.collection-notes h3 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2em;
+}
+
+.collection-notes p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  text-indent: 0;
+}
+
+/* 现代诗栏目：所有诗列表（平铺） */
+.poem-list-flat {
+  list-style: none;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+}
+
+.poem-list-flat-item {
+  display: flex;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed var(--line);
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.poem-list-flat-item:last-child {
+  border-bottom: none;
+}
+
 /* ===== 关于页 ===== */
 .about h1 {
   text-align: center;

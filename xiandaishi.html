@@ -1,7 +1,56 @@
 ---
-layout: genre
-collection: xiandaishi
-genre_name: 现代诗
-genre_desc: 不必押韵，不必对仗，只说心里话。
+layout: default
+title: 现代诗
 permalink: /xiandaishi/
 ---
+
+<section class="genre-page">
+  <header class="genre-header">
+    <h1>现代诗</h1>
+    <p class="genre-desc">不必押韵，不必对仗，只说心里话。</p>
+  </header>
+
+  <section class="poem-collections">
+    <h2 class="section-title">诗集</h2>
+    <div class="genre-grid">
+      {% assign collections = site.xiandaishi_collections | sort: 'date' | reverse %}
+      {% for coll in collections %}
+        <a class="genre-card collection-card" href="{{ coll.url | relative_url }}">
+          <span class="genre-icon">📕</span>
+          <span class="genre-name">{{ coll.title }}</span>
+          {% if coll.subtitle %}
+            <span class="genre-name-en">{{ coll.subtitle }}</span>
+          {% endif %}
+          <span class="genre-count">
+            {% assign n = site.xiandaishi | where: "collection_title", coll.title | size %}
+            {{ n }} 首
+          </span>
+        </a>
+      {% endfor %}
+    </div>
+    {% if collections.size == 0 %}
+      <p class="empty">还没有诗集。</p>
+    {% endif %}
+  </section>
+
+  <section class="recent">
+    <h2 class="section-title">所有诗</h2>
+    <ul class="poem-list-flat">
+      {% assign all_poems = site.xiandaishi | sort: 'date' | reverse %}
+      {% for poem in all_poems %}
+        <li class="poem-list-flat-item">
+          <span class="recent-genre">{{ poem.collection_title | default: '单首' }}</span>
+          <a class="recent-link" href="{{ poem.url | relative_url }}">{{ poem.title }}</a>
+          <span class="recent-date">{{ poem.date | date: "%Y.%m" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    {% if all_poems.size == 0 %}
+      <p class="empty">这里还没有作品，敬请期待。</p>
+    {% endif %}
+  </section>
+
+  <nav class="work-nav">
+    <a href="{{ '/' | relative_url }}">← 返回首页</a>
+  </nav>
+</section>

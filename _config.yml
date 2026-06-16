@@ -42,6 +42,10 @@ collections:
   xiandaishi:
     output: true
     permalink: /xiandaishi/:path/
+  # 现代诗合集（poetry collection，容纳《行路难》等诗集）
+  xiandaishi_collections:
+    output: true
+    permalink: /xiandaishi-collections/:path/
   duilian:
     output: true
     permalink: /duilian/:path/
@@ -85,6 +89,12 @@ defaults:
     values:
       layout: work
       genre: 现代诗
+  - scope:
+      path: ""
+      type: xiandaishi_collections
+    values:
+      layout: collection
+      genre: 诗集
   - scope:
       path: ""
       type: duilian
