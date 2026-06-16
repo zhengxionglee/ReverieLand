@@ -449,6 +449,24 @@ a:hover { color: var(--accent-soft); }
                "Noto Serif SC", "Songti SC", "STSong", serif;
 }
 
+/* 诗：居中 + 大字号 + 无首行缩进 */
+.work-body .poem,
+.work-body div.poem {
+  text-align: center;
+  text-indent: 0;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  line-height: 2.4;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.work-body .poem p {
+  text-indent: 0;
+  margin-bottom: 0.3rem;
+}
+
 /* 小说正文：更长行距、章节标题更突出、首行缩进可保留 */
 .work-body h2 {
   font-size: 1.6rem;
@@ -489,13 +507,15 @@ a:hover { color: var(--accent-soft); }
 
 /* 章节之间用空行分隔 */
 .work-body p {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
   text-indent: 2em;
 }
 
-.work-body p {
-  margin-bottom: 1.5rem;
-  text-indent: 2em;
+/* 诗里的 <p> 不要首行缩进（诗居中显示） */
+.work-body .poem p {
+  text-indent: 0;
+  margin-bottom: 0.3rem;
+  text-align: center;
 }
 
 .work-body h2,
