@@ -611,17 +611,26 @@ a:hover { color: var(--accent-soft); }
 /* 诗页里的 --- 水平分隔线（替代双空行）：淡雅、30% 宽、居中 */
 .poem-work .work-body hr {
   border: none;
-  width: 25%;
-  margin: 1.8rem auto;
+  width: 30%;
+  margin: 2.8rem auto;
   height: 1px;
   background: var(--accent-soft);
-  opacity: 0.45;
+  opacity: 0.6;
   position: static;
   color: transparent;
 }
 
 .poem-work .work-body hr::after {
   content: none;
+}
+
+/* 诗页里 hr 前后段落稍微拉开点 */
+.poem-work .work-body p + hr {
+  margin-top: 1rem;
+}
+
+.poem-work .work-body hr + p {
+  margin-top: 1rem;
 }
 
 .work-body .ci-title {
