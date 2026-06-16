@@ -49,6 +49,10 @@ collections:
   duilian:
     output: true
     permalink: /duilian/:path/
+  # 对联合集（如《缀玉集》收录多副对联）
+  duilian_collections:
+    output: true
+    permalink: /duilian-collections/:path/
   sanwen:
     output: true
     permalink: /sanwen/:path/
@@ -101,6 +105,12 @@ defaults:
     values:
       layout: work
       genre: 对联
+  - scope:
+      path: ""
+      type: duilian_collections
+    values:
+      layout: duilian-collection
+      genre: 对联合集
   - scope:
       path: ""
       type: sanwen
