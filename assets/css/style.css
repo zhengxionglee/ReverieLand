@@ -846,17 +846,6 @@ a:hover { color: var(--accent-soft); }
   content: none;
 }
 
-/* 对联正文之后的段落（收尾/续句）跟上下联同样式 */
-.work-body .duilian-xialian + p {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  margin: 0.5rem 0;
-  text-indent: 0;
-  color: var(--ink);
-}
-
 .work-body .duilian-horizontal {
   text-align: center;
   font-size: 1.1rem;
