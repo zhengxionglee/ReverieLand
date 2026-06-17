@@ -1,22 +1,24 @@
 {%- comment -%}
-  上一篇 / 下一篇 导航（自动根据 page 所在 collection 渲染）
+  上一篇 / 下一篇 导航
+  用法：layout 里调用 {% include prev-next.html %}
+  
+  自动从 page.path 推断 collection 名（如 _gushi/foo.md → gushi）
+  - 有 collection_title：在同诗集内前后循环
+  - 没 collection_title：在整个板块内前后循环
+  - 按 date 倒序（与列表页一致）
+  - 只有一个作品时不显示
 {%- endcomment -%}
 
-DBG-LABEL=[{{ page.collection.label }}]
-DBG-CTITLE=[{{ page.collection_title }}]
-DBG-PATH=[{{ page.path }}]
-
-{%- assign coll_label = page.collection.label -%}
+{%- assign path_parts = page.path | split: '/' -%}
+{%- assign coll_label = path_parts[0] | replace: '_', '' -%}
+{%- assign coll_name = page.collection_title -%}
 
 {%- if coll_label and coll_label != "" -%}
-  {%- assign coll_name = page.collection_title -%}
   {%- if coll_name and coll_name != "" -%}
     {%- assign siblings = site[coll_label] | where_exp: "item", "item.collection_title == coll_name" | sort: "date" | reverse -%}
   {%- else -%}
     {%- assign siblings = site[coll_label] | sort: "date" | reverse -%}
   {%- endif -%}
-
-  DBG-SIBLINGS-SIZE=[{{ siblings.size }}]
 
   {%- if siblings.size > 1 -%}
     {%- assign idx = nil -%}
@@ -25,8 +27,6 @@ DBG-PATH=[{{ page.path }}]
         {%- assign idx = forloop.index0 -%}
       {%- endif -%}
     {%- endfor -%}
-
-    DBG-IDX=[{{ idx }}]
 
     {%- if idx != nil -%}
       {%- assign prev_idx = idx | minus: 1 | modulo: siblings.size -%}
