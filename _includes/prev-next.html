@@ -1,53 +1,55 @@
 {%- comment -%}
-  上一篇 / 下一篇 导航
-  用法：{% include prev-next.html collection="gushi" %}
-  - collection：板块名（gushi / guci / xiandaishi / novel / sanwen / overtones）
+  上一篇 / 下一篇 导航（自动根据 page 所在 collection 渲染）
   
   逻辑：
-  - 如果当前页面有 collection_title：在同一诗集内前后循环（按 date 倒序，与列表一致）
+  - 如果当前页面有 collection_title：在同一诗集内前后循环（按 date 倒序）
   - 如果当前页面没有 collection_title：在整个板块内前后循环
-  - 顺序：date 倒序（最新在前，与列表页一致）
+  - 顺序：date 倒序（与列表页一致）
   - 只有一个作品时不显示
 {%- endcomment -%}
 
+{%- assign coll_label = page.collection.label -%}
 {%- assign coll_name = page.collection_title -%}
-{%- if coll_name and coll_name != "" -%}
-  {%- assign siblings = site[include.collection] | where: "collection_title", coll_name | sort: "date" | reverse -%}
-{%- else -%}
-  {%- assign siblings = site[include.collection] | sort: "date" | reverse -%}
-{%- endif -%}
 
-{%- if siblings.size > 1 -%}
-  {%- assign idx = nil -%}
-  {%- for s in siblings -%}
-    {%- if s.path == page.path -%}
-      {%- assign idx = forloop.index0 -%}
+{%- if coll_label and coll_label != "" -%}
+  {%- if coll_name and coll_name != "" -%}
+    {%- assign siblings = site[coll_label] | where_exp: "item", "item.collection_title == coll_name" | sort: "date" | reverse -%}
+  {%- else -%}
+    {%- assign siblings = site[coll_label] | sort: "date" | reverse -%}
+  {%- endif -%}
+
+  {%- if siblings.size > 1 -%}
+    {%- assign idx = nil -%}
+    {%- for s in siblings -%}
+      {%- if s.path == page.path -%}
+        {%- assign idx = forloop.index0 -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if idx != nil -%}
+      {%- assign prev_idx = idx | minus: 1 | modulo: siblings.size -%}
+      {%- assign next_idx = idx | plus: 1 | modulo: siblings.size -%}
+      {%- assign prev = siblings[prev_idx] -%}
+      {%- assign next = siblings[next_idx] -%}
+
+      <nav class="prev-next">
+        <a class="prev-next-link prev-next-prev" href="{{ prev.url | relative_url }}">
+          <span class="prev-next-label">← 上一篇</span>
+          <span class="prev-next-title">{{ prev.title }}</span>
+          <span class="prev-next-meta">
+            {{ prev.date | date: "%Y.%m" }}
+            {%- if prev.collection_title and prev.collection_title != coll_name %} · {{ prev.collection_title }}{% endif %}
+          </span>
+        </a>
+        <a class="prev-next-link prev-next-next" href="{{ next.url | relative_url }}">
+          <span class="prev-next-label">下一篇 →</span>
+          <span class="prev-next-title">{{ next.title }}</span>
+          <span class="prev-next-meta">
+            {{ next.date | date: "%Y.%m" }}
+            {%- if next.collection_title and next.collection_title != coll_name %} · {{ next.collection_title }}{% endif %}
+          </span>
+        </a>
+      </nav>
     {%- endif -%}
-  {%- endfor -%}
-
-  {%- if idx != nil -%}
-    {%- assign prev_idx = idx | minus: 1 | modulo: siblings.size -%}
-    {%- assign next_idx = idx | plus: 1 | modulo: siblings.size -%}
-    {%- assign prev = siblings[prev_idx] -%}
-    {%- assign next = siblings[next_idx] -%}
-
-    <nav class="prev-next">
-      <a class="prev-next-link prev-next-prev" href="{{ prev.url | relative_url }}">
-        <span class="prev-next-label">← 上一篇</span>
-        <span class="prev-next-title">{{ prev.title }}</span>
-        <span class="prev-next-meta">
-          {{ prev.date | date: "%Y.%m" }}
-          {%- if prev.collection_title and prev.collection_title != coll_name %} · {{ prev.collection_title }}{% endif %}
-        </span>
-      </a>
-      <a class="prev-next-link prev-next-next" href="{{ next.url | relative_url }}">
-        <span class="prev-next-label">下一篇 →</span>
-        <span class="prev-next-title">{{ next.title }}</span>
-        <span class="prev-next-meta">
-          {{ next.date | date: "%Y.%m" }}
-          {%- if next.collection_title and next.collection_title != coll_name %} · {{ next.collection_title }}{% endif %}
-        </span>
-      </a>
-    </nav>
   {%- endif -%}
 {%- endif -%}
