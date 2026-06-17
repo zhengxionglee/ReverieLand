@@ -944,6 +944,62 @@ a:hover { color: var(--accent-soft); }
 
 .work-nav a:hover { color: var(--accent); }
 
+/* ===== 上一篇 / 下一篇 ===== */
+.prev-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--line);
+}
+
+.prev-next-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg-card);
+  transition: border-color 0.2s, transform 0.2s;
+  min-height: 100%;
+}
+
+.prev-next-link:hover {
+  border-color: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+.prev-next-prev { text-align: left; }
+.prev-next-next { text-align: right; }
+
+.prev-next-label {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.2em;
+}
+
+.prev-next-title {
+  font-size: 1.05rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.prev-next-meta {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+.prev-next-link:hover .prev-next-title { color: var(--accent); }
+
+@media (max-width: 640px) {
+  .prev-next {
+    grid-template-columns: 1fr;
+  }
+  .prev-next-next { text-align: left; }
+}
+
 /* ===== 诗集（xiandaishi collections） ===== */
 .collection-page {
   max-width: 720px;

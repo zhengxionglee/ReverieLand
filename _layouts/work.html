@@ -19,6 +19,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% include prev-next.html collection=page.collection.label %}
+
   {% if page.notes %}
     <aside class="work-notes">
       <h3>创作手记</h3>

@@ -19,6 +19,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% include prev-next.html collection="gushi" %}
+
   <nav class="work-nav">
     {% if page.collection_title %}
       {% assign coll = site.gushi_collections | where: "title", page.collection_title | first %}
