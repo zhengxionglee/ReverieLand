@@ -512,7 +512,7 @@ a:hover { color: var(--accent-soft); }
 }
 
 .poem-work .work-title::after {
-  content: '印';
+  content: '诗';
   position: absolute;
   top: -0.2rem;
   right: -2.4rem;
