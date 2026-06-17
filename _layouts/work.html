@@ -33,12 +33,6 @@ layout: default
     {%- assign coll_label = path_parts[0] | replace: '_', '' -%}
     {%- if coll_label == 'duilian' -%}
       <a href="{{ '/duilian/' | relative_url }}">← 返回对联</a>
-    {%- elsif coll_label == 'novel' -%}
-      <a href="{{ '/novel/' | relative_url }}">← 返回小说</a>
-    {%- elsif coll_label == 'sanwen' -%}
-      <a href="{{ '/sanwen/' | relative_url }}">← 返回散文</a>
-    {%- elsif coll_label == 'overtones' -%}
-      <a href="{{ '/overtones/' | relative_url }}">← 返回弦外</a>
     {%- else -%}
       <a href="{{ '/' | relative_url }}">← 返回首页</a>
     {%- endif -%}
