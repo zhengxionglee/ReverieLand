@@ -1,9 +1,9 @@
 ---
 title: 独居怀旧
-subtitle: 选自《行路集》
+subtitle: 选自《怀思集》
 date: 2024-05-14T12:00:00 +0800
 author: 你的名字
-collection_title: 行路集
+collection_title: 怀思集
 ---
 
 惘然瞻前梦，仙踪去复来。
