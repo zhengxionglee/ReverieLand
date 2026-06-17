@@ -2,7 +2,10 @@
 layout: default
 ---
 
-<article class="work">
+{%- assign path_parts = page.path | split: '/' -%}
+{%- assign coll_label = path_parts[0] | replace: '_', '' -%}
+
+<article class="work work-{{ coll_label }}">
   <header class="work-header">
     <p class="work-genre">{{ page.genre }}</p>
     <h1 class="work-title">{{ page.title }}</h1>
@@ -29,8 +32,6 @@ layout: default
   {% endif %}
 
   <nav class="work-nav">
-    {%- assign path_parts = page.path | split: '/' -%}
-    {%- assign coll_label = path_parts[0] | replace: '_', '' -%}
     {%- if coll_label == 'duilian' -%}
       <a href="{{ '/duilian/' | relative_url }}">← 返回对联</a>
     {%- else -%}

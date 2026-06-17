@@ -533,6 +533,43 @@ a:hover { color: var(--accent-soft); }
   opacity: 0.88;
 }
 
+/* 题图印章（对联/小说/散文/弦外）通用样式 */
+.work-duilian .work-title,
+.work-novel .work-title,
+.work-sanwen .work-title,
+.work-overtones .work-title {
+  position: relative;
+  display: inline-block;
+}
+
+.work-duilian .work-title::after,
+.work-novel .work-title::after,
+.work-sanwen .work-title::after,
+.work-overtones .work-title::after {
+  content: '文';
+  position: absolute;
+  top: -0.2rem;
+  right: -2.4rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--bg-card);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  border-radius: 2px;
+  font-family: "STKaiti", "KaiTi", "LXGW WenKai", serif;
+  transform: rotate(-4deg);
+  box-shadow: 0 1px 3px rgba(139, 58, 47, 0.25);
+  opacity: 0.88;
+}
+
+/* 各板块印章字 */
+.work-duilian .work-title::after { content: '联'; }
+
 /* 小说正文：更长行距、章节标题更突出、首行缩进可保留 */
 .work-body h2 {
   font-size: 1.6rem;
