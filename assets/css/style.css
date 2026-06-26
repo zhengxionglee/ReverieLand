@@ -645,6 +645,24 @@ a:hover { color: var(--accent-soft); }
   margin-bottom: 0.3rem;
 }
 
+/* 弦外 · 歌词专用样式：居中、不缩进、紧凑 */
+.work-body .lyrics {
+  text-align: center;
+  margin: 1.8rem 0;
+  font-size: 1.2rem;
+  line-height: 2.2;
+  letter-spacing: 0.1em;
+}
+
+.work-body .lyrics p {
+  text-indent: 0;
+  margin: 0 0 0.8rem 0;
+}
+
+.work-body .lyrics p:last-child {
+  margin-bottom: 0;
+}
+
 /* 诗页里的 --- 水平分隔线（替代双空行）：淡雅、30% 宽、居中 */
 .poem-work .work-body hr {
   border: none;
