@@ -29,8 +29,8 @@
     {%- endfor -%}
 
     {%- if idx != nil -%}
-      {%- assign prev_idx = idx | minus: 1 | modulo: siblings.size -%}
-      {%- assign next_idx = idx | plus: 1 | modulo: siblings.size -%}
+      {%- assign prev_idx = idx | plus: 1 | modulo: siblings.size -%}
+      {%- assign next_idx = idx | minus: 1 | modulo: siblings.size -%}
       {%- assign prev = siblings[prev_idx] -%}
       {%- assign next = siblings[next_idx] -%}
 
