@@ -663,6 +663,26 @@ a:hover { color: var(--accent-soft); }
   margin-bottom: 0;
 }
 
+/* 散文里的歌词（小字号紧凑版）：比正文小一档、居中、不抢戏 */
+.work-body .lyrics-sm {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft, var(--ink));
+  opacity: 0.88;
+}
+
+.work-body .lyrics-sm p {
+  text-indent: 0;
+  margin: 0 0 0.6rem 0;
+}
+
+.work-body .lyrics-sm p:last-child {
+  margin-bottom: 0;
+}
+
 /* 诗页里的 --- 水平分隔线（替代双空行）：淡雅、30% 宽、居中 */
 .poem-work .work-body hr {
   border: none;
