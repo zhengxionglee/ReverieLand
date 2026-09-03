@@ -140,6 +140,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - HANDOFF.md
+  - .github
   - node_modules
   - vendor
   - .sass-cache
