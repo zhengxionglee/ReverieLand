@@ -2,7 +2,7 @@
 title: 科幻 其一
 subtitle: 选自《科幻》
 date: 2024-01-01T12:00:00 +0800
-author: 你的名字
+author: 苏格落
 collection_title: 科幻
 poem_number: 3
 ---

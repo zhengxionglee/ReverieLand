@@ -124,7 +124,7 @@ works/sanwen/2026-03-22-lao-jie-de-xia-wu.md
 title: 江南春
 subtitle: 一首七绝
 date: 2026-07-01 10:00:00 +0800
-author: 你的名字
+author: 苏格落
 notes: 这首是去年在杭州西湖边写的，最近才定稿。
 ---
 
@@ -156,7 +156,7 @@ git push
 ---
 title: 故事标题
 date: 2026-07-01 10:00:00 +0800
-author: 你的名字
+author: 苏格落
 ---
 
 ## 第一章

@@ -1,7 +1,7 @@
 ---
 title: 有限身
 date: 2026-08-22 04:30:00 +0800
-author: 你的名字
+author: 苏格落
 status: 已发布
 genre: 散文
 ---

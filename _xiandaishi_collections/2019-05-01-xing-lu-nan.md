@@ -2,7 +2,7 @@
 title: 行路难
 subtitle: 现代诗九首
 date: 2019-05-01T12:00:00 +0800
-author: 你的名字
+author: 苏格落
 poem_count: 9
 permalink: /xiandaishi-collections/xing-lu-nan/
 ---

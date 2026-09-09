@@ -186,7 +186,7 @@ CSS 在 `.gushi-work .work-title::after`、`.ci-work .work-title::after`、`.poe
 title: 标题
 subtitle: 副标题（可省）
 date: 2024-05-14 12:00:00 +0800
-author: 你的名字           # 几乎所有现存作品都写"你的名字"——其实是占位符
+author: 苏格落           # 2026-09 起全员启用笔名"苏格落"（原占位符"你的名字"已全部替换）
 genre: 古诗                # 大多时候 _config.yml defaults 会自动填
 collection_title: 怀思集   # 关键！属于哪个合集（决定 prev-next 范围）
 notes: 创作手记            # 可省，填了会在底部显示一个黄底色手记框
@@ -203,7 +203,7 @@ status: 已完结             # 可省
 title: 独居怀旧
 subtitle: 选自《怀思集》
 date: 2024-05-14T12:00:00 +0800
-author: 你的名字
+author: 苏格落
 collection_title: 怀思集
 ---
 
@@ -223,7 +223,7 @@ collection_title: 怀思集
 title: 望江南
 subtitle: 酒局
 date: 2023-03-11T12:00:00 +0800
-author: 你的名字
+author: 苏格落
 ---
 
 拼一醉，席上且频斟。
@@ -259,7 +259,7 @@ author: 你的名字
 title: 缀玉 其一
 subtitle: 选自《缀玉集》
 date: 2015-05-28T12:00:00 +0800
-author: 你的名字
+author: 苏格落
 collection_title: 缀玉集
 ---
 
@@ -289,7 +289,7 @@ collection_title: 缀玉集
 title: 前程似锦
 subtitle: 许嵩第九张专辑第三首 · 歌词赏析
 date: 2026-06-26 10:49:00 +0800
-author: 你的名字
+author: 苏格落
 genre: 弦外
 status: 已发布
 ---
@@ -373,7 +373,7 @@ genre: 小说
 title: 怀思集
 subtitle: 念故人，思旧事
 date: 2016-08-08T12:00:00 +0800
-author: 你的名字
+author: 苏格落
 poem_count: 6
 permalink: /gushi-collections/huai-si-ji/   # 重要！指定永久链接
 ---
@@ -637,7 +637,7 @@ c73b612  现代诗 · 新增诗集《科幻》（5首，2021.10-2026.03）
 
 - **常见误解**：
   - 看到 "subtitle: 选自《怀思集》" 别以为是冗余——它跟 front matter 里的 `collection_title` 是两回事，前者给人看、后者给 prev-next 找范围
-  - `author: 你的名字` 是占位文本，**别主动替换成什么"你的真名"**——用户没告诉过
+  - `author` 现为笔名 **苏格落**（2026-09 全员替换）；小说两部除外（《回声纪元》林深、《灯塔协议》林岬是作品中笔名）
   - 看到一个 md 文件的 `subtitle` 是空的别补，**留空是合法的**
 
 ---

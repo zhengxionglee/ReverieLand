@@ -2,7 +2,7 @@
 title: 西江月
 subtitle: 读红楼梦
 date: 2023-05-03T12:00:00 +0800
-author: 你的名字
+author: 苏格落
 ---
 
 镜里反观风月，

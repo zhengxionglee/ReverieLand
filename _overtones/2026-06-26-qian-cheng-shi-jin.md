@@ -2,7 +2,7 @@
 title: 前程似锦
 subtitle: 许嵩第九张专辑第三首 · 歌词赏析
 date: 2026-06-26 10:49:00 +0800
-author: 你的名字
+author: 苏格落
 status: 已发布
 genre: 弦外
 ---
