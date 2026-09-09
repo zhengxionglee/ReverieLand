@@ -1,6 +1,6 @@
 ---
 title: 前程似锦
-subtitle: 许嵩第九张专辑第三首 · 歌词赏析
+subtitle: 不错的续作和翻唱版本
 date: 2026-06-26 10:49:00 +0800
 author: 苏格落
 status: 已发布
