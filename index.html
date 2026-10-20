@@ -47,6 +47,11 @@ title: 遐想之地
       <span class="genre-name">散文</span>
       <span class="genre-count">{{ site.sanwen | size }} 篇</span>
     </a>
+    <a class="genre-card" href="{{ '/suibi/' | relative_url }}">
+      <span class="genre-icon">🖋️</span>
+      <span class="genre-name">随笔</span>
+      <span class="genre-count">{{ site.suibi | size }} 篇</span>
+    </a>
     <a class="genre-card" href="{{ '/overtones/' | relative_url }}">
       <span class="genre-icon">🎵</span>
       <span class="genre-name">弦外</span>
@@ -61,7 +66,7 @@ title: 遐想之地
   <ul class="recent-list">
     {% assign all_works = site.novel | concat: site.gushi | concat: site.guci
        | concat: site.xiandaishi | concat: site.duilian | concat: site.sanwen
-       | concat: site.overtones %}
+       | concat: site.suibi | concat: site.overtones %}
     {% assign sorted = all_works | sort: 'date' | reverse %}
     {% for work in sorted limit: 10 %}
       <li class="recent-item">

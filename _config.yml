@@ -1,6 +1,6 @@
 title: 遐想之地
 subtitle: ReverieLand
-description: 不为无益之事，何以遣有涯之生。收录小说、古诗、古词、现代诗、对联、散文、弦外。
+description: 不为无益之事，何以遣有涯之生。收录小说、古诗、古词、现代诗、对联、散文、随笔、弦外。
 author: 苏格落
 email: 1927743354@qq.com
 
@@ -60,6 +60,10 @@ collections:
   sanwen:
     output: true
     permalink: /sanwen/:path/
+  # 随笔（随想随记）
+  suibi:
+    output: true
+    permalink: /suibi/:path/
   # 弦外（Overtones · 歌词赏析）
   overtones:
     output: true
@@ -127,6 +131,13 @@ defaults:
     values:
       layout: work
       genre: 散文
+  # 随笔
+  - scope:
+      path: ""
+      type: suibi
+    values:
+      layout: work
+      genre: 随笔
   # 弦外
   - scope:
       path: ""

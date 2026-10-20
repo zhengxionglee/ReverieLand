@@ -27,6 +27,8 @@ layout: default
       {% assign works = site.duilian | sort: 'date' | reverse %}
     {% elsif page.collection == 'sanwen' %}
       {% assign works = site.sanwen | sort: 'date' | reverse %}
+    {% elsif page.collection == 'suibi' %}
+      {% assign works = site.suibi | sort: 'date' | reverse %}
     {% elsif page.collection == 'overtones' %}
       {% assign works = site.overtones | sort: 'date' | reverse %}
     {% endif %}
